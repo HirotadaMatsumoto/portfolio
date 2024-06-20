@@ -1,0 +1,45 @@
+#skills {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+#skills h2 {
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#skills ul li {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  flex: 1 1 calc(33% - 2rem);
+  text-align: center;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.home-link a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.home-link a:hover {
+  color: #0056b3;
+}
+
+.home-link {
+  margin-top: 1rem;
+}

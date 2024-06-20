@@ -1,0 +1,49 @@
+#projects {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+#projects h2 {
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.project {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.project h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-link {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  color: #0056b3;
+}
+
+.home-link a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.home-link a:hover {
+  color: #0056b3;
+}
+
+.home-link {
+  margin-top: 1rem;
+}

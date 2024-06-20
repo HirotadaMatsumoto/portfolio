@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* New Font */
+
+header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+}
+
+.title-text {
+  margin: 0;
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  position: relative;
+}
+
+.subtitle-text {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  opacity: 0;
+  z-index: 0; /* 白文字の下に配置 */
+  animation: fadeIn 8s ease-in-out forwards; /* アニメーションを追加 */
+}
+
+.overlay-1 {
+  font-size: 2.67rem; /* 4rem の 2/3 */
+  top: 2rem; /* 半文字下に配置 */
+  white-space: nowrap; /* 1行に表示 */
+}
+
+.overlay-2 {
+  font-size: 1.33rem; /* 2rem の 2/3 */
+  top: 6.5rem; /* 半文字下に配置 */
+  white-space: nowrap; /* 1行に表示 */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0 2rem; /* 両端に空白を追加 */
+  display: flex;
+  gap: 3rem; /* アイテム間の間隔を広げる */
+  margin: 0;
+  position: relative; /* ::before用に追加 */
+  z-index: 1; /* ::before用に追加 */
+  padding: 0.5rem 5rem;
+  border-radius: 8px;
+}
+
+.menu ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/public/assets/images/menu-background.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.8; /* 透明度を設定 */
+  border-radius: 8px; /* ulと同じ形状にするために追加 */
+  z-index: -1; /* ulの後ろに配置 */
+}
+
+.menu ul li {
+  margin: 0;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem; /* 文字を小さくする */
+  transition: color 0.3s;
+  cursor: pointer; /* ホバー時のマウス表示を変更 */
+}
+
+.menu ul li a:hover {
+  color: #ffeb3b;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
